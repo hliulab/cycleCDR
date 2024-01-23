@@ -1,0 +1,52 @@
+seed: 100
+batch_size: 512
+num_epoch: 100
+weight_decay: 0.000001
+
+lr: 0.0007
+lambda_lr_A: 1.5
+lambda_lr_B: 1.9
+
+lambda_idt: 1
+lambda_A: 1
+lambda_B: 1
+
+lambda_gen_A: 1
+lambda_gen_B: 1
+
+lambda_cycle_a_rec: 1
+
+lambda_mse_de_gene: 1
+lambda_mse_other_gene: 0.1
+
+dataset: l1000
+
+batch_norm: True
+dropout: 0
+is_dropout: False
+is_gan: False
+is_mse: True
+gen_a_rec: True
+
+is_mse_de_gene: False
+is_mse_log: True
+
+is_drug_gat: True
+gat_pretrained: True
+is_train_gat: True
+gat_pretrained_path: ./datasets/preprocess/l1000/100_model_encoder_gat1500_100_in-vitro_re_gat_dex25_p1.pkl
+
+pretrained: False
+pretrained_path: ./results/modules/cyclecpa_l1000_state_dict.pkl
+append_layer_width: 
+
+l1000_drug: ./datasets/preprocess/l1000/rdkit2D_embedding.parquet
+l1000_control_gene: ./datasets/preprocess/l1000/l1000_control_24h.csv
+l1000_treat_train_gene: ./datasets/preprocess/l1000/l1000_treat_24h_10_train.csv
+l1000_treat_valid_gene: ./datasets/preprocess/l1000/l1000_treat_24h_10_valid.csv
+l1000_treat_test_gene: ./datasets/preprocess/l1000/l1000_treat_24h_10_test.csv
+l1000_de_gene: ./datasets/preprocess/l1000/deg_gene.csv
+l1000_mse_de_gene: ./datasets/preprocess/l1000/mse_hvg_idx.pkl
+l1000_row_drug: ./datasets/preprocess/l1000/drug.csv
+l1000_drug_graph: ./datasets/preprocess/l1000/drug.pt
+

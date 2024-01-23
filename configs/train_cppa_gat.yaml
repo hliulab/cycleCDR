@@ -1,0 +1,48 @@
+seed: 100
+batch_size: 256
+num_epoch: 150
+weight_decay: 0.000001
+
+lr: 0.0025
+lambda_lr_A: 1.9
+lambda_lr_B: 1.9
+
+lambda_idt: 0
+lambda_A: 1
+lambda_B: 1
+
+lambda_gen_A: 1
+lambda_gen_B: 1
+
+lambda_cycle_a_rec: 1
+
+dataset: cppa
+
+batch_norm: False
+dropout: 0
+is_dropout: False
+is_gan: False
+is_mse: True
+gen_a_rec: True
+
+is_mse_de_gene: False
+is_mse_log: False
+
+is_drug_gat: True
+gat_pretrained: False
+is_train_gat: True
+gat_pretrained_path: ./datasets/preprocess/l1000/100_model_encoder_gat1500_100_in-vitro_re_gat_dex25_p1.pkl
+
+pretrained: False
+pretrained_path: ./results/modules/cyclecpa_l1000_state_dict.pkl
+append_layer_width: 
+
+cppa_drug: ./datasets/preprocess/cppa/rdkit2D_embedding_cppa.parquet
+cppa_control_train: ./datasets/preprocess/cppa/control_perturbed_data_train.csv
+cppa_control_valid: ./datasets/preprocess/cppa/control_perturbed_data_valid.csv
+cppa_control_test: ./datasets/preprocess/cppa/control_perturbed_data_test.csv
+cppa_treat_train: ./datasets/preprocess/cppa/treat_perturbed_data_train.csv
+cppa_treat_valid: ./datasets/preprocess/cppa/treat_perturbed_data_valid.csv
+cppa_treat_test: ./datasets/preprocess/cppa/treat_perturbed_data_test.csv
+cppa_row_drug: ./datasets/preprocess/cppa/drug_smiles.pkl
+cppa_processed_drug: ./datasets/preprocess/cppa/processed_drug_smiles.pt

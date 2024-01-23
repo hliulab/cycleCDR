@@ -1,0 +1,101 @@
+seed: 22153486
+
+batch_size: 512
+num_epoch: 80
+
+d_weight_decay: 0.00001
+  # type: float
+  # max: 0.0001
+  # min: 0.0000001
+
+d_lr: 0.00052
+
+d_step_size: 5
+
+d_gamma: 0.58
+
+g_weight_decay: 0.00001
+  # type: float
+  # max: 0.0001
+  # min: 0.0000001
+
+g_lr: 0.0006
+
+g_step_size: 9
+
+g_gamma: 0.77
+
+drug_weight_decay: 0.00007
+
+drug_lr: 0.0063
+
+drug_step_size: 9
+
+drug_gamma: 0.58
+
+lambda_idt: 1
+
+lambda_A: 7
+
+lambda_B: 6.7
+
+lambda_gen_A: 1.8
+
+lambda_gen_B: 1.5
+
+lambda_cycle_a_rec: 1.5
+
+lambda_mse_de_gene: 1
+  # type: float
+  # max: 5
+  # min: 1
+lambda_mse_other_gene: 0.5
+  # type: float
+  # max: 5
+  # min: 1
+
+lambda_disc_A: 3
+lambda_disc_B: 3.2
+
+dataset: rep1k562
+
+encode_batch_norm: False
+
+encode_dropout: 0.00018
+
+decode_batch_norm: False
+
+decode_dropout: 0.104
+
+discriminator_batch_norm: False
+
+discriminator_dropout: 0.0046
+
+is_gan: True
+is_mse: True
+gen_a_rec: True
+
+# 控制 de gene 的损失权重
+is_mse_de_gene: False
+is_mse_log: True
+
+is_drug_gat: False
+gat_pretrained: False
+is_train_gat: False
+gat_pretrained_path: ./datasets/preprocess/l1000/100_model_encoder_gat1500_100_in-vitro_re_gat_dex25_p1.pkl
+
+pretrained: false
+pretrained_path: ./results/modules/cyclecpa_l1000_state_dict.pkl
+append_layer_width: 2000
+
+rep1_treat_train: ./datasets/preprocess/replogle_k562_essential/treat_train.csv
+rep1_treat_valid: ./datasets/preprocess/replogle_k562_essential/treat_valid.csv
+rep1_treat_test: ./datasets/preprocess/replogle_k562_essential/treat_test.csv
+rep1_control_train: ./datasets/preprocess/replogle_k562_essential/control_train.csv
+rep1_control_valid: ./datasets/preprocess/replogle_k562_essential/control_valid.csv
+rep1_control_test: ./datasets/preprocess/replogle_k562_essential/control_test.csv
+rep1_pert: ./datasets/preprocess/replogle_k562_essential/pert_index.pkl
+rep1_de_gene: ./datasets/preprocess/replogle_k562_essential/deg_gene.csv
+rep1_mse_de_gene: ./datasets/preprocess/replogle_k562_essential/mse_hvg_idx.pkl
+rep1_row_drug: ./datasets/preprocess/replogle_k562_essential/rdkit2D_embedding.parquet
+rep1_processed_drug: ./datasets/preprocess/replogle_k562_essential/processed_drug_smiles.pt

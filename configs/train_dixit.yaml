@@ -1,0 +1,101 @@
+seed: 22153486
+
+batch_size: 512
+num_epoch: 80
+
+d_weight_decay: 0.00001
+  # type: float
+  # max: 0.0001
+  # min: 0.0000001
+
+d_lr: 0.0005
+
+d_step_size: 5
+
+d_gamma: 0.58
+
+g_weight_decay: 0.00001
+  # type: float
+  # max: 0.0001
+  # min: 0.0000001
+
+g_lr: 0.0006
+
+g_step_size: 9
+
+g_gamma: 0.77
+
+drug_weight_decay: 0.00007
+
+drug_lr: 0.0063
+
+drug_step_size: 9
+
+drug_gamma: 0.58
+
+lambda_idt: 1
+
+lambda_A: 7
+
+lambda_B: 6.7
+
+lambda_gen_A: 2.7
+
+lambda_gen_B: 2.4
+
+lambda_cycle_a_rec: 2.5
+
+lambda_mse_de_gene: 1
+  # type: float
+  # max: 5
+  # min: 1
+lambda_mse_other_gene: 0.5
+  # type: float
+  # max: 5
+  # min: 1
+
+lambda_disc_A: 1.5
+lambda_disc_B: 1.7
+
+dataset: dixit
+
+encode_batch_norm: False
+
+encode_dropout: 0.00018
+
+decode_batch_norm: False
+
+decode_dropout: 0.104
+
+discriminator_batch_norm: False
+
+discriminator_dropout: 0.0046
+
+is_gan: True
+is_mse: True
+gen_a_rec: True
+
+# 控制 de gene 的损失权重
+is_mse_de_gene: False
+is_mse_log: False
+
+is_drug_gat: False
+gat_pretrained: False
+is_train_gat: False
+gat_pretrained_path: ./datasets/preprocess/l1000/100_model_encoder_gat1500_100_in-vitro_re_gat_dex25_p1.pkl
+
+pretrained: false
+pretrained_path: ./results/modules/cyclecpa_l1000_state_dict.pkl
+append_layer_width: 2000
+
+dixit_treat_train: ./datasets/preprocess/dixit/treat_train.csv
+dixit_treat_valid: ./datasets/preprocess/dixit/treat_valid.csv
+dixit_treat_test: ./datasets/preprocess/dixit/treat_test.csv
+dixit_control_train: ./datasets/preprocess/dixit/control_train.csv
+dixit_control_valid: ./datasets/preprocess/dixit/control_valid.csv
+dixit_control_test: ./datasets/preprocess/dixit/control_test.csv
+dixit_pert: ./datasets/preprocess/dixit/pert_index.pkl
+dixit_de_gene: ./datasets/preprocess/dixit/deg_gene.csv
+dixit_mse_de_gene: ./datasets/preprocess/dixit/mse_hvg_idx.pkl
+dixit_row_drug: ./datasets/preprocess/dixit/rdkit2D_embedding.parquet
+dixit_processed_drug: ./datasets/preprocess/dixit/processed_drug_smiles.pt

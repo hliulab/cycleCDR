@@ -1,0 +1,98 @@
+seed: 22153486
+
+batch_size: 512
+num_epoch: 60
+
+d_weight_decay: 0.00001
+  # type: float
+  # max: 0.0001
+  # min: 0.0000001
+
+d_lr: 0.0004955278440097633
+
+d_step_size: 5
+
+d_gamma: 0.576530106318522
+
+g_weight_decay: 0.00001
+  # type: float
+  # max: 0.0001
+  # min: 0.0000001
+
+g_lr: 0.0006118866443065135
+
+g_step_size: 9
+
+g_gamma: 0.7744904228045778
+
+drug_weight_decay: 7.177790871803997e-05
+
+drug_lr: 0.0063025230002725675
+
+drug_step_size: 8
+
+drug_gamma: 0.5951353256039398
+
+lambda_idt: 0.9942562041056241
+
+lambda_A: 7.297871671609691
+
+lambda_B: 6.02809633312018
+
+lambda_gen_A: 2.736054344954634
+
+lambda_gen_B: 1.6400092178374321
+
+lambda_cycle_a_rec: 4.98691436943515
+
+lambda_mse_de_gene: 1
+  # type: float
+  # max: 5
+  # min: 1
+lambda_mse_other_gene: 0.5
+  # type: float
+  # max: 5
+  # min: 1
+
+dataset: sciplex3
+
+encode_batch_norm: False
+
+encode_dropout: 0.00018234081931905094
+
+decode_batch_norm: False
+
+decode_dropout: 0.10490163435693378
+
+discriminator_batch_norm: False
+
+discriminator_dropout: 0.00469583364701788
+
+is_gan: True
+is_mse: True
+gen_a_rec: False
+
+# 控制 de gene 的损失权重
+is_mse_de_gene: True
+is_mse_log: False
+
+is_drug_gat: True
+gat_pretrained: False
+is_train_gat: True
+gat_pretrained_path: ./datasets/l1000/100_model_encoder_gat1500_100_in-vitro_re_gat_dex25_p1.pkl
+
+pretrained: false
+pretrained_path: ./results/modules/cyclecpa_l1000_state_dict.pkl
+append_layer_width: 2000
+
+sciplex3_treat_train: ./datasets/preprocess/sciplex3/chemcpa_trapnell_treat_train.csv
+sciplex3_treat_valid: ./datasets/preprocess/sciplex3/chemcpa_trapnell_treat_valid.csv
+sciplex3_treat_test: ./datasets/preprocess/sciplex3/chemcpa_trapnell_treat_test.csv
+sciplex3_control_train: ./datasets/preprocess/sciplex3/chemcpa_trapnell_control_train.csv
+sciplex3_control_valid: ./datasets/preprocess/sciplex3/chemcpa_trapnell_control_valid.csv
+sciplex3_control_test: ./datasets/preprocess/sciplex3/chemcpa_trapnell_control_test.csv
+sciplex3_drug: ./datasets/preprocess/sciplex3/rdkit2D_embedding.parquet
+sciplex3_de_gene: ./datasets/preprocess/sciplex3/chemcpa_deg_gene.csv
+sciplex3_mse_de_gene: ./datasets/preprocess/sciplex3/chemcpa_mse_hvg_idx.pkl
+sciplex3_row_drug: ./datasets/preprocess/sciplex3/rdkit2D_embedding.parquet
+sciplex3_processed_drug: ./datasets/preprocess/sciplex3/processed_drug_smiles.pt
