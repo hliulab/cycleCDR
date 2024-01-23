@@ -14,6 +14,9 @@ The deep learning models were trained on 2*NVIDIA GeForce RTX 4090 on linux.
 
 + Python 3.11
 + PyTorch 2.0
++ Pandas 2.1.1
++ Numpy 1.25.2
++ Scikit-learn 1.3.1
 
 ## Usage
 
