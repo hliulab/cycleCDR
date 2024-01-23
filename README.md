@@ -1,24 +1,44 @@
-# cycleCDR
+# Interpretable modeling of cellular responses to drug perturbations using cycle consistence learning
+
+## Introduction
+
+**cycleCDR** is tnterpretable modeling of cellular responses to drug perturbations using cycle consistence learning.
+
+## Model architecture
+
+![](framework.png)
+
+## Requirements
+
+The deep learning models were trained on 2*NVIDIA GeForce RTX 4090 on linux.
+
++ Python 3.11
++ PyTorch 2.0
+
+## Usage
 
 To setup the environment, install conda and run (Must run on servers with multiple GPUs):
 
 ```bash
 conda create --name <your_env_name> --file requirements.txt
-
-torchrun --nproc_per_node=2 --master-port=29501  cycleCDR/linc_main.py
-
-mpirun -n 2 python cycleCDR/sciplex_train.py
-
-mpirun -n 2 python cycleCDR/sciplex_test.py
 ```
 
-+ `cycleCDR`: contains the code for the model, the data, and the training loop.
+To train this model and obtain results, you need to download the dataset (Example: L1000), place it in the datasets folder, and then run:
+
+
+```bash
+torchrun --nproc_per_node=2 --master-port=29501  cycleCDR/linc_main.py
+```
+
+If you want to train other datasets, you need to modify the `cycleCDR/linc_main.py` section
+
+## Directory structure
+
++ `cycleCDR`: contains the code for the model, the dataset, the evaluation, and the training loop.
 
 + `preprocessing`: Scripts for processing the data.
 
 + `configs`: Configuration file for hyperparameters.
-
-+ `plot_script`: Code for creating images in the paper.
 
 + `datasets`: Directory where data is stored.
 
