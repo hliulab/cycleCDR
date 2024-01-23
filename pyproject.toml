@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 90
+
+[tool.ruff]
+line-length = 115
+select = ["E", "F", "PD", "NPY", "B", "UP"]
+ignore = ["UP030", "B007"]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
