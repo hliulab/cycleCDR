@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**cycleCDR** is tnterpretable modeling of cellular responses to drug perturbations using cycle consistence learning.
+**cycleCDR** is interpretable modeling of cellular responses to drug perturbations using cycle consistence learning.
 
 ## Model architecture
 
