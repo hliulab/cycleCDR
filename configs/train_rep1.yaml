@@ -1,7 +1,7 @@
 seed: 22153486
 
 batch_size: 512
-num_epoch: 70
+num_epoch: 50
 
 d_weight_decay: 0.00001
   # type: float
@@ -35,9 +35,9 @@ drug_gamma: 0.58
 
 lambda_idt: 1
 
-lambda_A: 7
+lambda_A: 7.8
 
-lambda_B: 6.7
+lambda_B: 7.8
 
 lambda_gen_A: 1.7
 
@@ -54,8 +54,8 @@ lambda_mse_other_gene: 0.5
   # max: 5
   # min: 1
 
-lambda_disc_A: 3.5
-lambda_disc_B: 3.4
+lambda_disc_A: 3.9
+lambda_disc_B: 3.9
 
 dataset: rep1
 

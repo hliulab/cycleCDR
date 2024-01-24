@@ -231,7 +231,7 @@ class Rep1Dataset(Dataset):
 
         control = torch.tensor(list(control.to_numpy()), dtype=self.dtype)
         treat = torch.tensor(list(treat), dtype=self.dtype)
-        pert = torch.tensor([pert], dtype=self.dtype) / 1000
+        pert = torch.tensor([pert], dtype=self.dtype) / 10000
         de_index = torch.tensor(de_idx, dtype=torch.long)
 
         return (control, treat, pert, cov_pert, de_index)
