@@ -72,7 +72,7 @@ discriminator_batch_norm: False
 discriminator_dropout: 0.0046
 
 is_gan: True
-is_mse: True
+is_mse: False
 gen_a_rec: True
 
 # 控制 de gene 的损失权重
