@@ -1,7 +1,7 @@
 seed: 22153486
 
 batch_size: 512
-num_epoch: 80
+num_epoch: 70
 
 d_weight_decay: 0.00001
   # type: float
@@ -54,8 +54,8 @@ lambda_mse_other_gene: 0.5
   # max: 5
   # min: 1
 
-lambda_disc_A: 3
-lambda_disc_B: 3
+lambda_disc_A: 3.5
+lambda_disc_B: 3.4
 
 dataset: rep1
 
@@ -72,7 +72,7 @@ discriminator_batch_norm: False
 discriminator_dropout: 0.0046
 
 is_gan: True
-is_mse: True
+is_mse: False
 gen_a_rec: True
 
 # 控制 de gene 的损失权重
